@@ -1,0 +1,46 @@
+{
+  "name": "expressdataset",
+  "version": "1.0.0",
+  "description": "A coding challenge test for techplus",
+  "main": "nodemon bin/www",
+  "scripts": {
+    "dev": "nodemon bin/www",
+    "predev": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delino12/express-dataset.git"
+  },
+  "keywords": [
+    "sqlite3",
+    "nodejs",
+    "expressjs",
+    "webservice",
+    "api",
+    "moment"
+  ],
+  "author": "Ekpoto Liberty Bernard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/delino12/express-dataset/issues"
+  },
+  "homepage": "https://github.com/delino12/express-dataset#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.15.6",
+    "mocha": "^6.1.4",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "request-promise": "^4.2.4",
+    "response-time": "^2.3.2",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^5.0.0"
+  }
+}

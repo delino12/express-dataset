@@ -1,0 +1,16 @@
+require('dotenv').config();
+const migration = require('../database/migration');
+const http = require('http');
+const app  = require('../app');
+const port = parseInt(process.env.PORT) || 8022;
+const host = process.env.HOST || "http://localhost";
+
+// The express app server listening to assigned port
+app.set('port', port);
+const server = http.createServer(app);
+
+server.listen(port, function(){
+	console.log('starting server...');
+	console.log(host+':'+port);
+	console.log('press & hold down ctrl+c to terminate server');
+});
