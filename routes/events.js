@@ -4,6 +4,7 @@ var router 		= express.Router();
 
 // web route uri
 router.get('/', controller.getAllEvents);
+router.get('/actors/:actorId', controller.getByActor);
 router.post('/', controller.addEvent);
 
 module.exports = router;

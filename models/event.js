@@ -43,21 +43,12 @@ exports.getAll = async (req, res) => {
 	}else{
 		res.status(200).send(allEvents);
 	}
-
-	// db.all(`SELECT id, type, actor, repo, created_at FROM events LEFT JOIN actor ON actor.id = events.actor`, (err, events) => {
-	// 	console.log(events);
-	// 	if(events){
-	// 		res.status(200).send(events);
-	// 	}else if(err){
-	// 		res.status(200).send([]);
-	// 	}
-	// });
 }
 
 // fetch event by actor id
 exports.byActor = async (req, res) => {
 	// fetch event by actor ID
-	const events = await getAllEVentsByActorID(req.params.actorID).then(events => events).catch(err => console.log(err));
+	const events = await getAllEVentsByActorID(req.params.actorId).then(events => events).catch(err => console.log(err));
 	const allEvents = [];
 	const event = {}
 	for(var i = 0; i < events.length; i++){

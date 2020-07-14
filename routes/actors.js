@@ -4,8 +4,7 @@ var router 		= express.Router();
 
 // web route uri
 router.get('/', controller.fetchAll);
-// router.get('/:actor_id', controller.fetchOne);
-// router.post('/', controller.addOne);
-// router.delete('/', controller.deleteAll);
+router.put('/:actorId', controller.updateActorProfile);
+router.get('/streak', controller.getActorStreak);
 
 module.exports = router;

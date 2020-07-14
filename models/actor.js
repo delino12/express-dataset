@@ -24,10 +24,10 @@ exports.updateActorProfile = (req, res) => {
   }else{
     // update actor
     db.serialize(() => {
-      db.all(`SELECT * FROM actors WHERE id = ${req.body.id}`, (err, val) => {
+      db.all(`SELECT * FROM actors WHERE id = ${req.params.actorId}`, (err, val) => {
         if(err) console.log(err);
         if(val.length > 0){
-          db.run(`UPDATE actors SET avatar_url = ? WHERE id = ${req.body.id}`, [req.body.avatar_url],  (err, val) => {
+          db.run(`UPDATE actors SET avatar_url = ? WHERE id = ${req.params.actorId}`, [req.body.avatar_url],  (err, val) => {
             if(err) res.status(400).send();
             // return data
             res.status(200).send();
