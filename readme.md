@@ -5,7 +5,21 @@ Express dataset challenge
 Clone application repository and enter the command below to start application server
 
 ```
-	npm run dev
+$ cd express-dataset 
+```
+
+```
+$ npm run dev
+```
+
+This will pre-install dependencies and start application server.
+
+or 
+
+```
+$ cd express-dataset 
+$ npm run install
+$ npm run 
 ```
 
 ## Author
